@@ -22,5 +22,5 @@ This is a Telegram bot built for the CHMS Comparative Sector, designed to collec
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/Rammiso/Izharul-Haq---Bot-Automation-App.git
+cd Izharul-Haq---Bot-Automation-App
