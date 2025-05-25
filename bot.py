@@ -15,6 +15,8 @@ from telegram.ext import (
 )
 import os 
 TOKEN = os.getenv("BOT_TOKEN")
+if not TOKEN:
+    raise ValueError("BOT_TOKEN not set in environment!")
 CHAT_ID = os.getenv("CHAT_ID")
 
 #  Helper: Reset user state
