@@ -14,9 +14,6 @@ from telegram.ext import (
     filters,
 )
 
-# BOT_TOKEN = "7778847996:AAEFG7GILIe2_cr4f_WzBOswVqSYm9-mvcc"
-# CHAT_ID = 5072548007
-
 import os 
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 if not BOT_TOKEN:
