@@ -18,7 +18,7 @@ import os
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 if not BOT_TOKEN:
     raise ValueError("BOT_TOKEN not set in environment!")
-CHAT_ID = os.getenv("CHAT_ID")
+CHAT_ID = 798410269
 
 #  Helper: Reset user state
 
