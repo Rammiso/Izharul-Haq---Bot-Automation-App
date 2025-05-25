@@ -13,9 +13,9 @@ from telegram.ext import (
     ContextTypes,
     filters,
 )
-
-BOT_TOKEN = "Bot Token"
-CHAT_ID = "Client Chat ID"
+import os 
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+CHAT_ID = os.getenv("CHAT_ID")
 
 #  Helper: Reset user state
 
