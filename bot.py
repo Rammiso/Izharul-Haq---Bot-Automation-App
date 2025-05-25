@@ -14,8 +14,14 @@ from telegram.ext import (
     filters,
 )
 
-BOT_TOKEN = "7778847996:AAEFG7GILIe2_cr4f_WzBOswVqSYm9-mvcc"
-CHAT_ID = 5072548007
+# BOT_TOKEN = "7778847996:AAEFG7GILIe2_cr4f_WzBOswVqSYm9-mvcc"
+# CHAT_ID = 5072548007
+
+import os 
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+if not BOT_TOKEN:
+    raise ValueError("BOT_TOKEN not set in environment!")
+CHAT_ID = os.getenv("CHAT_ID")
 
 #  Helper: Reset user state
 
@@ -134,7 +140,7 @@ async def input_handle(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("❗ I didn't understand that. Use the 📋 Menu button.")
 
 #  Run Bot
-app = ApplicationBuilder().token(BOT_TOKEN).build()
+app = ApplicationBuilder().token(TOKEN).build()
 app.add_handler(CommandHandler("start", start))
 app.add_handler(CallbackQueryHandler(inline_menu_handler))
 app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, input_handle))
