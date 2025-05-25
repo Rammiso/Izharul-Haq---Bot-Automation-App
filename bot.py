@@ -14,7 +14,7 @@ from telegram.ext import (
     filters,
 )
 import os 
-BOT_TOKEN = os.getenv("BOT_TOKEN")
+TOKEN = os.getenv("BOT_TOKEN")
 CHAT_ID = os.getenv("CHAT_ID")
 
 #  Helper: Reset user state
@@ -134,7 +134,7 @@ async def input_handle(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("❗ I didn't understand that. Use the 📋 Menu button.")
 
 #  Run Bot
-app = ApplicationBuilder().token(BOT_TOKEN).build()
+app = ApplicationBuilder().token(TOKEN).build()
 app.add_handler(CommandHandler("start", start))
 app.add_handler(CallbackQueryHandler(inline_menu_handler))
 app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, input_handle))
