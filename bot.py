@@ -14,8 +14,8 @@ from telegram.ext import (
     filters,
 )
 
-BOT_TOKEN = "Bot Token"
-CHAT_ID = "Client Chat ID"
+BOT_TOKEN = "7778847996:AAEFG7GILIe2_cr4f_WzBOswVqSYm9-mvcc"
+CHAT_ID = 5072548007
 
 #  Helper: Reset user state
 
