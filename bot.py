@@ -34,8 +34,7 @@ def get_inline_menu():
     return InlineKeyboardMarkup([
         [InlineKeyboardButton("❓ Ask a Question", callback_data="ask_question")],
         [InlineKeyboardButton("📝 Send Feedback", callback_data="send_feedback")],
-        [InlineKeyboardButton("☎️ Contact Amir", callback_data="contact_amir")],
-        [InlineKeyboardButton("📶 Join Channel", url="https://t.me/+dbm2e44puwcyZjBk")]
+        [InlineKeyboardButton("☎️ Contact Amir", callback_data="contact_amir")]
     ])
 
 # === /start Command ===
